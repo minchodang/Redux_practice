@@ -1,4 +1,4 @@
-import { legacy_createStore } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 
 const ADD = 'ADD';
 const DELETE = 'DELETE';
@@ -28,8 +28,6 @@ const reducer = (state = [], action) => {
   }
 };
 
-const store = legacy_createStore(reducer);
-
-store.subscribe();
+const store = createStore(reducer);
 
 export default store;
